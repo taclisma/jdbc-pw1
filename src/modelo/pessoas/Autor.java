@@ -1,6 +1,6 @@
-package pessoas;
+package modelo.pessoas;
 
-import contatos.Telefone;
+import modelo.contatos.Telefone;
 
 public class Autor {
 	private String nome;

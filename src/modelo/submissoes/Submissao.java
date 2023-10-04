@@ -1,6 +1,7 @@
-package submissoes;
-import util.Validador;
+package modelo.submissoes;
 import java.util.Date;
+
+import modelo.util.Validador;
 
 public class Submissao implements Validador{
 	

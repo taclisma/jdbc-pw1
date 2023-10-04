@@ -1,4 +1,4 @@
-package contatos;
+package modelo.contatos;
 
 public class Telefone {
 	private int ddd;
