@@ -7,6 +7,7 @@ public class Submissao implements Validador{
 	
 	private static int total;
 
+	private Situacao situacao;
 	private String titulo;
 	private Date data;
 	
