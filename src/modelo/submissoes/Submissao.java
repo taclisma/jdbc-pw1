@@ -1,6 +1,7 @@
 package modelo.submissoes;
 import java.util.Date;
 
+import modelo.util.Situacao;
 import modelo.util.Validador;
 
 public class Submissao implements Validador{
@@ -43,6 +44,12 @@ public class Submissao implements Validador{
 	@Override
 	public String toString() {
 		return "Submissao: \nTítulo: " + titulo + "\nData: " + data;
+	}
+	public Situacao getSituacao() {
+		return situacao;
+	}
+	public void setSituacao(Situacao situacao) {
+		this.situacao = situacao;
 	}
 	
 }
