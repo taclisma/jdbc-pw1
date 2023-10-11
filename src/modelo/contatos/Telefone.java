@@ -1,9 +1,9 @@
 package modelo.contatos;
 
 public class Telefone {
+	
 	private int ddd;
 	private  long numero;
-	
 	
 	public Telefone() {};
 	public Telefone(int ddd, long numero) {
@@ -22,5 +22,12 @@ public class Telefone {
 	public void setNumero(long numero) {
 		this.numero = numero;
 	}
+	
+	@Override
+	public String toString() {
+		return "(" + ddd + ") " + numero;
+	}
+	
+	
 	
 }

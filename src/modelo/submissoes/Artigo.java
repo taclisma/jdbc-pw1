@@ -1,15 +1,19 @@
 package modelo.submissoes;
 
 import java.util.Date;
+import java.util.TreeSet;
+
+import modelo.pessoas.Autor;
+import modelo.util.Situacao;
 
 public class Artigo extends Submissao{
 	private String abstrato;
 	private String resumo;
 	private String arquivo;
 	
-	public Artigo() {};	
-	public Artigo(String titulo, Date data, String abstrato, String resumo, String arquivo) {
-		super(titulo, data);
+	public Artigo() { super(); };	
+	public Artigo(String titulo, Date data, TreeSet<Autor> autores, String abstrato, String resumo, String arquivo, Situacao situacao) {
+		super(titulo, data, autores, situacao);
 		this.abstrato = abstrato;
 		this.resumo = resumo;
 		this.arquivo = arquivo;
@@ -18,8 +22,7 @@ public class Artigo extends Submissao{
 
 	@Override
 	public String toString() {
-		return super.toString() + "Artigo [abstrato=" + abstrato + ", resumo=" + resumo + ", arquivo=" + arquivo + ", toString()="
-				+ "]";
+		return super.toString() + "Artigo \n\tAbstrato: " + abstrato + "\n\tResumo: " + resumo + "\n\tArquivo: " + arquivo + "\n";
 	}
 	
 	public String getAbstrato() {

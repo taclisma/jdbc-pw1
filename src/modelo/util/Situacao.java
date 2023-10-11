@@ -6,10 +6,24 @@ public enum Situacao {
 	ACEITA(3, "Aceita"),
 	REJEITADA(4, "Rejeitada");
 
-	private Situacao(int id, String descricao) {
-		// TODO Auto-generated constructor stub
-		
+	private final int valor;
+	private final String descricao;
+
+	private Situacao(int valor, String descricao) {
+		this.valor = valor;
+		this.descricao = descricao;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public int getValor() {
+		return valor;
 	}
 	
+	public String getItem() {
+		return this.getValor() + " - " + this.getDescricao();
+	}
 	
 }

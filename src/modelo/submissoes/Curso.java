@@ -1,6 +1,10 @@
 package modelo.submissoes;
 
 import java.util.Date;
+import java.util.TreeSet;
+
+import modelo.pessoas.Autor;
+import modelo.util.Situacao;
 
 public class Curso extends Submissao{
 	private String justificativa;
@@ -8,8 +12,9 @@ public class Curso extends Submissao{
 	private String objetivo;
 	private double duracao;
 	
-	public Curso(String titulo, Date data, String justificativa, String material, String objetivo, double duracao) {
-		super(titulo, data);
+	public Curso() { super(); };
+	public Curso(String titulo, Date data, TreeSet<Autor> autores, String justificativa, String material, String objetivo, double duracao, Situacao situacao) {
+		super(titulo, data, autores, situacao);
 		this.justificativa = justificativa;
 		this.material = material;
 		this.objetivo = objetivo;
@@ -18,8 +23,8 @@ public class Curso extends Submissao{
 	
 	@Override
 	public String toString() {
-		return super.toString() + "Curso [justificativa=" + justificativa + ", material=" + material + ", objetivo=" + objetivo
-				+ ", duracao=" + duracao + ", toString()=" + "]";
+		return super.toString() + "Curso \n\tJustificativa: " + justificativa + "\n\tMaterial: " + material + "\n\tObjetivo: " + objetivo
+				+ "\n\tDuração: " + duracao + "\n";
 	}
 	
 	public String getJustificativa() {
@@ -53,6 +58,5 @@ public class Curso extends Submissao{
 	public void setDuracao(double duracao) {
 		this.duracao = duracao;
 	}
-	
 	
 }
