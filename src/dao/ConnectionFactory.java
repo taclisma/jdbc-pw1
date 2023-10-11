@@ -5,7 +5,7 @@ import java.sql.*;
 public class ConnectionFactory {
     public Connection getConnection() throws ClassNotFoundException, SQLException{
            Class.forName("com.mysql.cj.jdbc.Driver");
-           String urlBD="jdbc:mysql://localhost:3306/test";
+           String urlBD="jdbc:mysql://localhost:3306/jdbc";
            return DriverManager.getConnection(urlBD, "root", "your_password");
     }
 }

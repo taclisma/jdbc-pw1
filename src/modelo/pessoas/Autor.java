@@ -2,6 +2,7 @@ package modelo.pessoas;
 
 import java.util.Objects;
 
+import dao.AutorDAO;
 import modelo.contatos.Telefone;
 
 public class Autor implements Comparable<Autor>{
@@ -40,7 +41,7 @@ public class Autor implements Comparable<Autor>{
 	
 	@Override
 	public String toString() {
-		return "\tNome: " + nome + " \n\tEmail: " + email + "\n\tTelefone: " + telefone + "\n";
+		return "\tNome: " + nome + " \n\tEmail: " + email + "\n\tTelefone: " + telefone;
 	}
 	
 	@Override
@@ -63,7 +64,9 @@ public class Autor implements Comparable<Autor>{
 		return getNome().compareToIgnoreCase(o.getNome());
 	}
 
-	
+	public int insert() {
+		return new AutorDAO().insert(this);
+	}
 
 	
 	
